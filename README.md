@@ -1,3 +1,5 @@
+Discord - 'eintr' for suggestions / reports
+
 # Developer Credits
 
 - Slime2 was developed by **Zaytri** (https://github.com/zaytri)
