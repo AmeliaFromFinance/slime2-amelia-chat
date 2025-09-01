@@ -302,6 +302,18 @@
     move-in-right 0.5s;
 }
 
+.animation-enter-fade-up.message {
+  animation:
+    fade-in 0.5s,
+    move-in-up 0.5s;
+}
+
+.animation-enter-fade-down.message {
+  animation:
+    fade-in 0.5s,
+    move-in-down 0.5s;
+}
+
 .animation-exit-fade.message {
   animation: fade-out 0.5s;
 }
@@ -316,6 +328,18 @@
   animation:
     fade-out 0.5s,
     move-out-right 0.5s;
+}
+
+.animation-exit-fade-up.message {
+  animation:
+    fade-out 0.5s,
+    move-out-up 0.5s;
+}
+
+.animation-exit-fade-down.message {
+  animation:
+    fade-out 0.5s,
+    move-out-down 0.5s;
 }
 
 @keyframes fade-in {
@@ -370,4 +394,24 @@
   to {
     transform: translateX(-100%);
   }
+}
+
+@keyframes move-in-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes move-out-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+@keyframes move-in-down {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes move-out-down {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
 }

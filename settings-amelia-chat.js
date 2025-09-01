@@ -100,6 +100,14 @@ const displaySettings = defineSetting('Display', 'display', 'group', {
 
 const emoteSettings = defineSetting('Emotes', 'emotes', 'group', {
   settings: [
+    defineSetting('Enable 7tv emotes', 'enable7tv', 'boolean-input', {
+      defaultValue: true,
+      description: "When disabled, 7tv emotes won't render."
+    }),
+    defineSetting('Enable personal 7tv emotes', 'enable7tvPersonal', 'boolean-input', {
+      defaultValue: false,
+      description: "When enabled, users personal 7tv emotes will also be rendered."
+    }),
     defineSetting('Static emotes', 'static', 'boolean-input', {
       defaultValue: false,
       description:
@@ -156,6 +164,9 @@ const emoteSettings = defineSetting('Emotes', 'emotes', 'group', {
 const badgeSettings = defineSetting('Badges', 'badges', 'group', {
   settings: [
     defineSetting('Show Twitch Badges', 'display', 'boolean-input', {
+      defaultValue: true,
+    }),
+    defineSetting('Show 7tv Badge', 'display7tv', 'boolean-input', {
       defaultValue: true,
     }),
     defineSetting('Badge Size (px)', 'size', 'number-input', {
@@ -436,7 +447,7 @@ const animationSettings = defineSetting('Animations', 'animations', 'group', {
     defineSetting('Entrance Animation', 'enter', 'select-input', {
       defaultValue: 'none',
       options: defineOptions(
-        ['Fade', 'Fade Left', 'Fade Right', 'None'].map(label => [
+        ['Fade', 'Fade Left', 'Fade Right', 'Fade Up', 'Fade Down', 'None'].map(label => [
           label,
           label.replaceAll(' ', '-').toLowerCase(),
         ]),
@@ -445,7 +456,7 @@ const animationSettings = defineSetting('Animations', 'animations', 'group', {
     defineSetting('Exit Animation', 'exit', 'select-input', {
       defaultValue: 'none',
       options: defineOptions(
-        ['Fade', 'Fade Left', 'Fade Right', 'None'].map(label => [
+        ['Fade', 'Fade Left', 'Fade Right', 'Fade Up', 'Fade Down', 'None'].map(label => [
           label,
           label.replaceAll(' ', '-').toLowerCase(),
         ]),
